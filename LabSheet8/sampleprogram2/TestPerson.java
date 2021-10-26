@@ -1,4 +1,4 @@
-package LabSheet8.sampleprogram1;
+package LabSheet8.sampleprogram2;
 
 //TestPerson.java
 /*This driver program tests out the classes Person and Student fully*/
@@ -35,13 +35,13 @@ public class TestPerson
         text += "\n\nCalling the Student() constructor .....";
         Student student1 = new Student();
 
-        text += "\nValue of first Student object is: " + student1;
+        text += "\nValue of first Student object is:\n" + student1;
 
         text += "\n\nCalling the Student(String,String,GregorianCalendar,int,String) constructor using hard-coded values .....";
         Student student2 = new Student("Michael O' Connor","Ballybunion, Co. Kerry",
                            new GregorianCalendar(1996,4,12),425362,"Computing");
 
-        text += "\nValue of second Student object is: " + student2;
+        text += "\nValue of second Student object is:\n" + student2;
 
         JOptionPane.showMessageDialog(null,"*****Person and Student Class Tester*****\n\n" + text,"",
                                       JOptionPane.INFORMATION_MESSAGE);

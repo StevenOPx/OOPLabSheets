@@ -1,15 +1,16 @@
-package LabSheet8.sampleprogram1;
+package LabSheet8.sampleprogram2;
 
 //Person.java
-/*An instantiable Person class that acts as a superclass for the Student class*/
+/*An instantiable Person class that acts as a superclass for the Student class. This version
+* demonstrates the use of protected attributes and methods*/
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class Person {
-    private String name;
-    private String address;
-    private GregorianCalendar dateOfBirth;
+    protected String name;
+    protected String address;
+    protected GregorianCalendar dateOfBirth;
 
     public Person(){
         this("No name specified","No address specified",null);
@@ -21,11 +22,11 @@ public class Person {
         setDateOfBirth(dateOfBirth);
     }
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
