@@ -28,7 +28,7 @@ public abstract class Lecturer implements Person {
     }
 
     @Override
-    public void setName(String nm) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -38,7 +38,7 @@ public abstract class Lecturer implements Person {
     }
 
     @Override
-    public void setAddress(String add) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -48,7 +48,7 @@ public abstract class Lecturer implements Person {
     }
 
     @Override
-    public void setDateOfBirth(GregorianCalendar dob) {
+    public void setDateOfBirth(GregorianCalendar dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -56,7 +56,7 @@ public abstract class Lecturer implements Person {
         return staffID;
     }
 
-    public void setStaffID(String sID) {
+    public void setStaffID(String staffID) {
         this.staffID = staffID;
     }
 
@@ -68,7 +68,7 @@ public abstract class Lecturer implements Person {
         return coursesTaught;
     }
 
-    public void setCoursesTaught(String[] ct) {
+    public void setCoursesTaught(String[] coursesTaught) {
         this.coursesTaught = coursesTaught;
     }
 
@@ -76,7 +76,7 @@ public abstract class Lecturer implements Person {
         return dateOfAppointment;
     }
 
-    public void setDateOfAppointment(GregorianCalendar doa) {
+    public void setDateOfAppointment(GregorianCalendar dateOfAppointment) {
         this.dateOfAppointment = dateOfAppointment;
     }
 
@@ -86,7 +86,7 @@ public abstract class Lecturer implements Person {
                 "\nLecturer Address: " + getAddress() +
                 "\nLecturer Date of Birth: ";
 
-        SimpleDateFormat formatDate = new SimpleDateFormat("DD-MM-YYYY");
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
 
         if (getDateOfBirth() != null)
         {
@@ -104,6 +104,7 @@ public abstract class Lecturer implements Person {
                 "\nLecturer Date of Appointment is " + formatDate.format(getDateOfAppointment().getTime()) +
                 "\nLecturer Status is " + getStatus() +
                 "\nLecturer Point on Scale is " + getPointOnScale();
+
         return str;
     }
 }
